@@ -5,7 +5,6 @@ import 'home_page.dart';
 void main() {
   runApp(AppWidget());
 }
-//queijo
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -16,7 +15,7 @@ class AppWidget extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => (const HomePage()),
-        "sobre": (context) => (sobre()),
+        "sobre": (context) => (Sobre()),
       },
       theme: ThemeData.dark(),
     ));
