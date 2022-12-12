@@ -15,7 +15,7 @@ class AppWidget extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => (const HomePage()),
-        "sobre": (context) => (sobre()),
+        "sobre": (context) => (Sobre()),
       },
       theme: ThemeData.dark(),
     ));

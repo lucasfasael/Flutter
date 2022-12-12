@@ -40,24 +40,28 @@ class Botoes extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               FloatingActionButton(
+                heroTag: "clear",
                   onPressed: clear,
                   child: Text(
                     "C",
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "reverso",
                   onPressed: reverso,
                   child: Text(
                     "+/-",
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "porcent",
                   onPressed: porcent,
                   child: Text(
                     "%",
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "divisao",
                   onPressed: divisao,
                   child: Text(
                     "÷",
@@ -69,6 +73,7 @@ class Botoes extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               FloatingActionButton(
+                heroTag: "onTapNumber7",
                   onPressed: () {
                     onTapNumber!("7");
                   },
@@ -77,6 +82,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "onTapNumber8",
                   onPressed: () {
                     onTapNumber!("8");
                   },
@@ -85,6 +91,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "onTapNumber9",
                   onPressed: () {
                     onTapNumber!("9");
                   },
@@ -93,6 +100,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "multiplicacao",
                   onPressed: multiplicacao,
                   child: Text(
                     "X",
@@ -104,6 +112,7 @@ class Botoes extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               FloatingActionButton(
+                heroTag: "onTapNumber4",
                   onPressed: () {
                     onTapNumber!("4");
                   },
@@ -112,6 +121,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "onTapNumber5",
                   onPressed: () {
                     onTapNumber!("5");
                   },
@@ -120,6 +130,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "onTapNumber6",
                   onPressed: () {
                     onTapNumber!("6");
                   },
@@ -128,6 +139,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "subtracao",
                   onPressed: subtracao,
                   child: Text(
                     "-",
@@ -139,6 +151,7 @@ class Botoes extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               FloatingActionButton(
+                heroTag: "onTapNumber1",
                   onPressed: () {
                     onTapNumber!("1");
                   },
@@ -147,6 +160,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "onTapNumber2",
                   onPressed: () {
                     onTapNumber!("2");
                   },
@@ -155,6 +169,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "onTapNumber3",
                   onPressed: () {
                     onTapNumber!("3");
                   },
@@ -163,6 +178,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "soma",
                   onPressed: soma,
                   child: Text(
                     "+",
@@ -174,6 +190,7 @@ class Botoes extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               FloatingActionButton(
+                heroTag: "onTapNumber0",
                   onPressed: () {
                     onTapNumber!("0");
                   },
@@ -182,6 +199,7 @@ class Botoes extends StatelessWidget {
                     style: TextStyle(fontSize: 35),
                   )),
               FloatingActionButton(
+                heroTag: "onTapNumber.",
                   onPressed: () {
                     onTapNumber!(".");
                   },

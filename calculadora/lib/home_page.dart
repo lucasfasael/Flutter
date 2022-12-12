@@ -186,9 +186,7 @@ class HomePageState extends State<HomePage> {
             size: 40,
           ),
           onTap: () {
-            setState(() {
               Navigator.of(context).pushNamed("sobre");
-            });
           },
         ),
       )),
