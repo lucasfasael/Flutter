@@ -6,77 +6,56 @@ class Sobre extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true ,
-        title: Text(
-          "Desenvolvedores"),
-          ),
+        centerTitle: true,
+        title: Text("Desenvolvedor"),
+      ),
       body: Stack(
-        children: 
-          [
-            Container(
-              width: size.width,
-              height: size.height,
-              child: Image.asset(
-                "assets/icon/2.png",
-                fit: BoxFit.cover,
-                ),
+        children: [
+          Container(
+            width: size.width,
+            height: size.height,
+            child: Image.asset(
+              "assets/icon/2.png",
+              fit: BoxFit.cover,
             ),
-            Container(
-              color: Color.fromARGB(179, 0, 0, 0)            ),
-            Center(
+          ),
+          Container(color: Color.fromARGB(179, 0, 0, 0)),
+          Center(
             child: Container(
-                width: size.width * 0.9,
-                height: size.height,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 12),
-                          child: SizedBox(
-                            width: 150,
-                            height: 150,
-                            child: Image.asset("assets/icon/1.jpg"),
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Flexible(child: Text(
-                              style: TextStyle(
-                                fontSize: 18,
-                              ),
-                            "Hello, meu nome é Verenilson da Silva Souza e estou aprendendo o Framework Flutter! :D",
-                          ),),
-                          ],
-                        ),
-                      ],
+              width: size.width * 0.9,
+              height: size.height,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 12),
+                    child: SizedBox(
+                      width: 200,
+                      height: 200,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(999),
+                          child: Image.asset(
+                            "assets/icon/3.jpg",
+                            fit: BoxFit.cover,
+                            alignment: Alignment.topCenter,
+                          )),
                     ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 12),
-                          child: SizedBox(
-                            width: 150,
-                            height: 150,
-                            child: Image.asset("assets/icon/3.jpg"),
+                  ),
+                  Row(
+                    children: [
+                      Flexible(
+                        child: Text(
+                          style: TextStyle(
+                            fontSize: 18,
                           ),
+                          "Olá, meu nome é Lucas Fasael e estou aprendendo o Framework Flutter!",
                         ),
-                        Row(
-                          children: [
-                            Flexible(child: Text(
-                              style: TextStyle(
-                                fontSize: 18,
-                              ),
-                            "Hello, meu nome é Lucas Fasael e estou aprendendo o Framework Flutter! :D",
-                          ),),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
+            ),
           ),
         ],
       ),
