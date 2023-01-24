@@ -10,6 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool op = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,21 +25,27 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         backgroundColor: Colors.greenAccent,
       ),
-      body: ListView(
-        children: [
-          Task(
-            'Aprender Flutter tomando café',
-            "assets/images/DashFlutter.png",
-          ),
-          Task('Jogar', "assets/images/fliperama.jpg"),
-          Task('Meditar', "assets/images/DashFlutter.png"),
-          Task('Aprender Flutter', "assets/images/DashFlutter.png"),
-          Task('Jogar', "assets/images/DashFlutter.png"),
-          Task('Meditar', "assets/images/DashFlutter.png")
-        ],
+      body: AnimatedOpacity(
+        opacity: op ? 1 : 0,
+        duration: Duration(milliseconds: 800),
+        child: ListView(
+          children: [
+            Task('Aprender Flutter tomando café',
+                "assets/images/DashFlutter.png", 3),
+            Task('Jogar', "assets/images/fliperama.jpg", 1),
+            Task('Meditar', "assets/images/DashFlutter.png", 5),
+            Task('Aprender Flutter', "assets/images/DashFlutter.png", 4),
+            Task('Jogar', "assets/images/DashFlutter.png", 1),
+            Task('Meditar', "assets/images/DashFlutter.png", 5)
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            op = !op;
+          });
+        },
         child: Icon(Icons.remove_red_eye),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.

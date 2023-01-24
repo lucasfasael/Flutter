@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
-import 'widgets/task.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
