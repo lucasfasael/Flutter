@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,7 +31,7 @@ class MyApp extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Text('Batata')],
+                      children: const [Text('Batata')],
                     )
                   ],
                 )
@@ -55,7 +53,7 @@ class MyApp extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Text('Frita')],
+                      children: const [Text('Frita')],
                     )
                   ],
                 )

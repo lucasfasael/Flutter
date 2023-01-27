@@ -2,7 +2,7 @@ import 'package:ex004/model/models.dart';
 import 'package:flutter/material.dart';
 
 class DeletProduct extends StatelessWidget {
-  DeletProduct({super.key, required this.model});
+  const DeletProduct({super.key, required this.model});
   final Model model;
 
   @override

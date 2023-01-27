@@ -6,7 +6,7 @@ class Task extends StatefulWidget {
   final String img;
   final int dificuldade;
 
-  Task(this.nome, this.img, this.dificuldade, {super.key});
+  const Task(this.nome, this.img, this.dificuldade, {super.key});
 
   @override
   State<Task> createState() => _TaskState();
@@ -31,7 +31,7 @@ class _TaskState extends State<Task> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 240, 235, 235),
+                    color: const Color.fromARGB(255, 240, 235, 235),
                     borderRadius: BorderRadius.circular(8)),
                 height: 100,
                 child: Row(
@@ -39,7 +39,7 @@ class _TaskState extends State<Task> {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(95, 68, 65, 65),
+                          color: const Color.fromARGB(95, 68, 65, 65),
                           borderRadius: BorderRadius.circular(8)),
                       height: 100,
                       width: 70,
@@ -51,10 +51,10 @@ class _TaskState extends State<Task> {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       height: 100,
                       width: 200,
-                      child: Container(
+                      child: SizedBox(
                         width: 200,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -62,7 +62,7 @@ class _TaskState extends State<Task> {
                           children: [
                             Text(
                               widget.nome,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 24,
                                   color: Colors.black,
                                   overflow: TextOverflow.ellipsis),
@@ -72,7 +72,7 @@ class _TaskState extends State<Task> {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       height: 45,
                       child: ElevatedButton(
                         onPressed: () {
@@ -84,7 +84,7 @@ class _TaskState extends State<Task> {
                           padding: const EdgeInsets.all(2.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                            children: const [
                               Icon(Icons.arrow_drop_up),
                               Text("Lvl Up"),
                             ],
@@ -100,19 +100,20 @@ class _TaskState extends State<Task> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 200,
                       child: LinearProgressIndicator(
                         value: (widget.dificuldade) > 0
                             ? (nivel / widget.dificuldade) / 10
                             : 1,
-                        backgroundColor: Color.fromARGB(255, 250, 237, 237),
+                        backgroundColor:
+                            const Color.fromARGB(255, 250, 237, 237),
                         color: Colors.red,
                       ),
                     ),
                     Text(
                       'Nível: $nivel',
-                      style: TextStyle(color: Colors.yellowAccent),
+                      style: const TextStyle(color: Colors.yellowAccent),
                     ),
                   ],
                 ),
