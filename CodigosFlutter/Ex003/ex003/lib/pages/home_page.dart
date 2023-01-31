@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   bool opacidade = true;
   List<TaskModel> tarefas = [];
+  ScrollController scrollController = ScrollController();
 
   adicionaTarefas() {
     setState(() {
@@ -22,6 +23,8 @@ class _HomePageState extends State<HomePage> {
       tarefa.nivelDificuldade = 1;
       tarefas.add(tarefa);
     });
+    scrollController.animateTo(scrollController.position.maxScrollExtent,
+        duration: Duration(milliseconds: 700), curve: Curves.easeInOutExpo);
   }
 
   @override
@@ -42,6 +45,7 @@ class _HomePageState extends State<HomePage> {
         opacity: opacidade ? 1 : 0,
         duration: const Duration(milliseconds: 800),
         child: ListView(
+          controller: scrollController,
           // ignore: prefer_const_literals_to_create_immutables
           children: tarefas
               .map((e) => Task(e.nome, e.imagemUrl, e.nivelDificuldade))

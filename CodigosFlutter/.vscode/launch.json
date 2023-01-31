@@ -1,0 +1,168 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "delivery",
+            "cwd": "delivery",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "delivery (profile mode)",
+            "cwd": "delivery",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "delivery (release mode)",
+            "cwd": "delivery",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "ex006",
+            "cwd": "ex006",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ex006 (profile mode)",
+            "cwd": "ex006",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ex006 (release mode)",
+            "cwd": "ex006",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "block",
+            "cwd": "block\\block",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "block (profile mode)",
+            "cwd": "block\\block",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "block (release mode)",
+            "cwd": "block\\block",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "ex001",
+            "cwd": "Ex001\\ex001",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ex001 (profile mode)",
+            "cwd": "Ex001\\ex001",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ex001 (release mode)",
+            "cwd": "Ex001\\ex001",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "ex002",
+            "cwd": "Ex002\\ex002",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ex002 (profile mode)",
+            "cwd": "Ex002\\ex002",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ex002 (release mode)",
+            "cwd": "Ex002\\ex002",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "ex003",
+            "cwd": "Ex003\\ex003",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ex003 (profile mode)",
+            "cwd": "Ex003\\ex003",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ex003 (release mode)",
+            "cwd": "Ex003\\ex003",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "ex004",
+            "cwd": "Ex004\\ex004",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ex004 (profile mode)",
+            "cwd": "Ex004\\ex004",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ex004 (release mode)",
+            "cwd": "Ex004\\ex004",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "ex005",
+            "cwd": "Ex005\\ex005",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ex005 (profile mode)",
+            "cwd": "Ex005\\ex005",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ex005 (release mode)",
+            "cwd": "Ex005\\ex005",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

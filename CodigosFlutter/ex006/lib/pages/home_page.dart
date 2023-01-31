@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       TarefaModel tarefaModel = TarefaModel();
       tarefaModel.caminhoImagem = "assets/images/DashFlutter.png";
-      tarefaModel.nivelDificuldade = 1;
+      tarefaModel.nivelDificuldade = 3;
       tarefaModel.nome = "Aprender Flutter";
       tarefas.add(tarefaModel);
     });
@@ -57,7 +57,8 @@ class _HomePageState extends State<HomePage> {
         duration: const Duration(milliseconds: 800),
         child: ListView(
           controller: scrollController,
-          children: tarefas.map((e) => Task(e.nome, e.caminhoImagem, e.nivelDificuldade))
+          children: tarefas
+              .map((e) => Task(e.nome, e.caminhoImagem, e.nivelDificuldade))
               .toList(),
         ),
       ),
@@ -74,11 +75,73 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+// Task('Aprender Flutter tomando café',
+//     "assets/images/DashFlutter.png", 3),
+// Task('Jogar', "assets/images/fliperama.jpg", 1),
+// Task('Meditar', "assets/images/DashFlutter.png", 5),
+// Task('Aprender Flutter', "assets/images/DashFlutter.png", 4),
+// Task('Jogar', "assets/images/DashFlutter.png", 1),
+// Task('Meditar', "assets/images/DashFlutter.png", 5)
 
-            // Task('Aprender Flutter tomando café',
-            //     "assets/images/DashFlutter.png", 3),
-            // Task('Jogar', "assets/images/fliperama.jpg", 1),
-            // Task('Meditar', "assets/images/DashFlutter.png", 5),
-            // Task('Aprender Flutter', "assets/images/DashFlutter.png", 4),
-            // Task('Jogar', "assets/images/DashFlutter.png", 1),
-            // Task('Meditar', "assets/images/DashFlutter.png", 5)
+abstract class ExecutaPagamento {
+  bool pagar(double valorDoPagamento);
+}
+
+class ExecutaPagamentoPix extends ExecutaPagamento {
+  @override
+  bool pagar(double valorDoPagamento) {
+    print("Regra de negocio pix");
+    return true;
+  }
+}
+
+class ExecutaPagamentoBoleto extends ExecutaPagamento {
+  @override
+  bool pagar(double valorDoPagamento) {
+    print("Regra de negocio boleto");
+    return true;
+  }
+}
+
+class MyWidget extends StatefulWidget {
+  final ExecutaPagamento executaPagamento;
+
+  const MyWidget({super.key, required this.executaPagamento});
+
+  @override
+  State<MyWidget> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
+  @override
+  void initState() {
+    widget.executaPagamento.pagar(50);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+// class ClasseDePagameto {
+//   bool pagar(double valorDoPagamento, String tipoPagamento) {
+//     if (tipoPagamento == "pix") {
+//       print("Regra de negocio pix");
+//       return true;
+//     }
+
+//     if (tipoPagamento == "ted") {
+//       print("Regra de negocio ted");
+//       return true;
+//     }
+
+//     if (tipoPagamento == "boleto") {
+//       print("Regra de negocio boleto");
+//       return true;
+//     }
+
+//     return true;
+//   }
+// }
