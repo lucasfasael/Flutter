@@ -13,4 +13,4 @@ auth:
       - /products:
          method: get
       - /products/{*}:
-          method: get
+         method: get
