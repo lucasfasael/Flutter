@@ -3,7 +3,6 @@ import 'package:delivery_app/app/core/ui/styles/colors_app.dart';
 import 'package:delivery_app/app/core/ui/widgets/delivery_button.dart';
 import 'package:flutter/material.dart';
 
-
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
 
