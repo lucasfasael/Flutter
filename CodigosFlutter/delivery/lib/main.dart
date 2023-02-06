@@ -4,5 +4,5 @@ import 'app/core/config/env/env.dart';
 
 Future<void> main() async {
   await Env.i.load();
-  runApp(const DeliveryApp());
+  runApp(DeliveryApp());
 }

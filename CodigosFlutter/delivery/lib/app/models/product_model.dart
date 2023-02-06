@@ -27,15 +27,16 @@ class ProductModel {
 
   factory ProductModel.fromMap(Map<String, dynamic> map) {
     return ProductModel(
-      id: map['id'] as int,
-      name: map['name'] as String,
-      description: map['description'] as String,
-      price: map['price'] as double,
-      image: map['image'] as String,
+      id: map['id'] as int? ?? 0,
+      name: map['name'] as String? ?? '',
+      description: map['description'] as String? ?? '',
+      price: map['price'] as double? ?? 0,
+      image: map['image'] as String? ?? '',
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory ProductModel.fromJson(String source) => ProductModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ProductModel.fromJson(String source) =>
+      ProductModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }
