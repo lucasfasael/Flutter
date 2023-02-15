@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../components/tasks.dart';
@@ -18,7 +17,12 @@ class _InitialScreenState extends State<InitialScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter: Primeiros Passos'),
-        leading: Icon(Icons.add_task),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, '/form');
+          },
+          child: Icon(Icons.add_task),
+        ),
       ),
       body: AnimatedOpacity(
         opacity: opacidade ? 1.0 : 0.0,

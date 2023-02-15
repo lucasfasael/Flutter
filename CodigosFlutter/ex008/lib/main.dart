@@ -1,4 +1,5 @@
 
+import 'package:alura_flutter_curso_1/screens/new_task.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/tela_inicial.dart';
@@ -24,7 +25,10 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: InitialScreen(),
+      routes: {
+        '/':(context) => InitialScreen(),
+        '/form':(context) => TaskGen(),
+      },
     );
   }
 }
