@@ -40,7 +40,7 @@ class _FormScreenState extends State<FormScreen> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text('Nova Tarefa'),
+          title: const Text('Nova Tarefa'),
           backgroundColor: Colors.cyan,
         ),
         body: Center(
@@ -67,7 +67,7 @@ class _FormScreenState extends State<FormScreen> {
                       },
                       controller: nameController,
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         filled: true,
                         fillColor: Colors.white70,
@@ -89,7 +89,7 @@ class _FormScreenState extends State<FormScreen> {
                       keyboardType: TextInputType.number,
                       controller: difficultyController,
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         filled: true,
                         fillColor: Colors.white70,
@@ -112,7 +112,7 @@ class _FormScreenState extends State<FormScreen> {
                       },
                       controller: imageController,
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         filled: true,
                         fillColor: Colors.white70,
@@ -152,14 +152,14 @@ class _FormScreenState extends State<FormScreen> {
                               imageController.text,
                               int.parse(difficultyController.text));
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
+                            const SnackBar(
                               content: Text('Tarefa adicionada com sucesso !'),
                             ),
                           );
                           Navigator.pop(context);
                         }
                       },
-                      child: Text('Adicionar Tarefa !'))
+                      child: const Text('Adicionar Tarefa !'))
                 ],
               ),
             ),
