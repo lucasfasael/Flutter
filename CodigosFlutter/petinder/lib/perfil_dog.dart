@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:petinder/dog_entity.dart';
 
 class PerfilDog extends StatelessWidget {
-  const PerfilDog({super.key});
+  // poderia usar variável por variável, teria que atribuir o E do Map um por um.
+  final DogEntity dogEntity;
+
+  //Ações:
+  final void Function() actionLike;
+  final void Function() actionDislike;
+
+  const PerfilDog({
+    super.key,
+    required this.dogEntity,
+    required this.actionLike,
+    required this.actionDislike,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +47,15 @@ class PerfilDog extends StatelessWidget {
                     height: height * 0.6,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
-                      child: Image.asset(
-                        'assets/images/husky.jpg',
+                      child: Image.network(
+                        //loadingBuilder: (context, child, loadingProgress) {
+                        //loadingProgress.expectedTotalBytes
+                        //return const CircularProgressIndicator();
+                        //return child;
+                        //},
+                        //cacheWidth: (width * 0.9) ~/ 0.9,
+                        //cacheHeight: (height * 0.6) ~/ 1.5,
+                        dogEntity.image,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -57,23 +77,28 @@ class PerfilDog extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: const [
+                            children: [
                               Text(
-                                'Ayla',
-                                style: TextStyle(
+                                dogEntity.nome,
+                                style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 30,
                                     fontStyle: FontStyle.italic),
                               ),
-                              Icon(
-                                Icons.female_rounded,
-                                color: Colors.red,
-                              )
+                              dogEntity.sexo == "M"
+                                  ? const Icon(
+                                      Icons.male,
+                                      color: Colors.blue,
+                                    )
+                                  : const Icon(
+                                      Icons.female_rounded,
+                                      color: Colors.red,
+                                    )
                             ],
                           ),
-                          const Text(
-                            "(Husky Siberiano)",
-                            style: TextStyle(color: Colors.yellowAccent),
+                          Text(
+                            "(${dogEntity.raca})",
+                            style: const TextStyle(color: Colors.yellowAccent),
                           )
                         ],
                       ),
@@ -97,7 +122,7 @@ class PerfilDog extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap: actionDislike,
                         child: Container(
                           height: 40,
                           width: 40,
@@ -112,7 +137,7 @@ class PerfilDog extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: actionLike,
                         child: Container(
                           height: 40,
                           width: 40,
@@ -128,7 +153,7 @@ class PerfilDog extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: actionLike,
                         child: Container(
                           height: 40,
                           width: 40,
