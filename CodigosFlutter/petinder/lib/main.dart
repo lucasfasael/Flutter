@@ -1,5 +1,7 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:petinder/perfil_dog.dart';
+import 'package:petinder/match_screen.dart';
 
 import 'home_page.dart';
 
@@ -17,8 +19,7 @@ class AppInit extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(title: 'Petinder'),
+      home: HomePage(title: 'Petinder'),
     );
   }
 }
-
