@@ -65,8 +65,8 @@ class Msg extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 200,
-                          width: 200,
+                          height: height * 0.3,
+                          width: width * 0.3,
                           child: Image.asset(
                             "assets/images/X.png",
                             fit: BoxFit.contain,

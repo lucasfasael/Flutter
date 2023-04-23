@@ -11,10 +11,9 @@ import 'package:top_snackbar_flutter/top_snack_bar.dart';
 import 'perfil_dog.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key, required this.title});
+  const HomePage({super.key, required this.title});
 
   final String title;
-  int cont = 0;
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -49,7 +48,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   onLoadPage() async {
-    var resultado = await dio.get("http://192.168.101.7:8080/api/petinder");
+    var resultado = await dio
+        .get("https://474b-187-84-179-171.ngrok-free.app/api/petinder");
     setState(() {
       dogs.clear();
       dogs.addAll((resultado.data as List).map((e) => DogEntity.fromMap(e)));
@@ -58,26 +58,54 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     //debugInvertOversizedImages = true;
 
     return Scaffold(
-      drawer: const Drawer(),
       appBar: AppBar(
-        title: Padding(
-          padding: const EdgeInsets.only(left: 80.0),
-          child: Row(
-            children: [
-              const Icon(
-                Icons.pets,
-                color: Colors.amber,
-              ),
-              Text(
-                widget.title,
-              ),
-            ],
-          ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Icon(
+              Icons.pets,
+              color: Colors.amber,
+            ),
+            Text(
+              widget.title,
+            ),
+            const SizedBox(
+              width: 50,
+            ),
+          ],
         ),
       ),
+      drawer: Drawer(
+          backgroundColor: Colors.amber[800],
+          child: Center(
+            child: ListTile(
+              leading: const Icon(
+                Icons.favorite,
+                size: 40,
+                color: Colors.red,
+              ),
+              title: const Text(
+                "Sobre",
+                style: TextStyle(
+                  fontSize: 35,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              trailing: const Icon(
+                Icons.arrow_forward,
+                size: 40,
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed("sobre");
+              },
+            ),
+          )),
       body: IndexedStack(
         index: opcaoSelecionada,
         children: <Widget>[
@@ -87,6 +115,7 @@ class _HomePageState extends State<HomePage> {
               const Center(
                 child: Msg(),
               ),
+              
               ...dogs.reversed
                   .map(
                     (e) => PerfilDog(
@@ -96,17 +125,24 @@ class _HomePageState extends State<HomePage> {
                           boolValue = Random().nextBool();
                           if (boolValue == true) {
                             dogsMatchs.add(e);
-                            showTopSnackBar(OverlayState(),
-                                const CustomSnackBar.success(message: "Oi"));
-                            print("Verdadeiro");
+                            showTopSnackBar(
+                              Overlay.of(context),
+                              CustomSnackBar.success(
+                                message:
+                                    "Parabéns, você tem um novo match com ${e.nome} !!",
+                              ),
+                            );
                           } else {
                             print("Falso");
                           }
                           dogs.remove(e);
-                          widget.cont++;
                         });
                       },
-                      actionDislike: () {},
+                      actionDislike: () {
+                        setState(() {
+                          dogs.remove(e);
+                        });
+                      },
                     ),
                   )
                   .toList(),
@@ -139,10 +175,6 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Matches',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Configurações',
           ),
         ],
       ),

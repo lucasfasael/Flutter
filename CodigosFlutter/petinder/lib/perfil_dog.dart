@@ -48,6 +48,21 @@ class PerfilDog extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.network(
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          }
+
+                          if (loadingProgress.cumulativeBytesLoaded <
+                              loadingProgress.expectedTotalBytes!) {
+                            return SizedBox(
+                                height: 200,
+                                width: 200,
+                                child:
+                                    Center(child: CircularProgressIndicator()));
+                          }
+                          return child;
+                        },
                         //loadingBuilder: (context, child, loadingProgress) {
                         //loadingProgress.expectedTotalBytes
                         //return const CircularProgressIndicator();
@@ -56,7 +71,7 @@ class PerfilDog extends StatelessWidget {
                         //cacheWidth: (width * 0.9) ~/ 0.9,
                         //cacheHeight: (height * 0.6) ~/ 1.5,
                         dogEntity.image,
-                        fit: BoxFit.cover,
+                        fit: BoxFit.cover, //
                       ),
                     ),
                   ),
