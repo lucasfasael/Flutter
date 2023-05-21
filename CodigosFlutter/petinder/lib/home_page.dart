@@ -58,27 +58,30 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     //debugInvertOversizedImages = true;
 
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Icon(
-              Icons.pets,
-              color: Colors.amber,
-            ),
-            Text(
-              widget.title,
-            ),
-            const SizedBox(
-              width: 50,
-            ),
-          ],
+        title: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed("chat");
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.pets,
+                color: Colors.amber,
+              ),
+              Text(
+                widget.title,
+              ),
+              const SizedBox(
+                width: 50,
+              ),
+            ],
+          ),
         ),
       ),
       drawer: Drawer(

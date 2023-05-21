@@ -1,7 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:petinder/match_screen.dart';
+import 'package:petinder/dog_chat.dart';
 
 import 'home_page.dart';
 import 'sobre.dart';
@@ -24,6 +22,7 @@ class AppInit extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "sobre": (context) => (const Sobre()),
+        "chat": (context) => (DogChat()),
       },
     );
   }
