@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:mqtt_client/mqtt_client.dart';
 import 'package:mqtt_client/mqtt_server_client.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,7 +16,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int umidade = 40;
-  String msg = '';
+  String msg = '0';
 
   final client = MqttServerClient('192.168.101.8', '1883');
 
@@ -64,12 +65,37 @@ class _HomeState extends State<Home> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Center(
           child: Text(
-            "Nível de Umidade - Irrigação",
+            "Irrigação Automática",
             style:
-                TextStyle(color: Color.fromARGB(255, 12, 0, 247), fontSize: 25),
+                TextStyle(color: Color.fromARGB(255, 12, 0, 247), fontSize: 30),
           ),
         ),
       ),
+      drawer: Drawer(
+          backgroundColor: Colors.amber[800],
+          child: Center(
+            child: ListTile(
+              leading: const Icon(
+                Icons.favorite,
+                size: 40,
+                color: Colors.red,
+              ),
+              title: const Text(
+                "Sobre",
+                style: TextStyle(
+                  fontSize: 35,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              trailing: const Icon(
+                Icons.arrow_forward,
+                size: 40,
+              ),
+              onTap: () {
+                Navigator.of(context).pushNamed("sobre");
+              },
+            ),
+          )),
       body: Container(
         width: width,
         height: height,
@@ -81,11 +107,41 @@ class _HomeState extends State<Home> {
           ),
         ),
         child: Center(
-          child: Text(
-            msg.isEmpty ? 'Ainda não há mensagem' : "Umidade: $msg",
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-                color: Color.fromARGB(255, 12, 0, 247), fontSize: 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 150,
+                width: 150,
+                child: CircularPercentIndicator(
+                  radius: 70.0,
+                  lineWidth: 10.0,
+                  percent: double.parse(msg) < 0
+                      ? 0.0
+                      : double.parse(msg) > 100
+                          ? 1.0
+                          : double.tryParse(msg)! * 0.01,
+                  center: Text(
+                    double.parse(msg) < 0
+                        ? "0%"
+                        : double.parse(msg) > 100
+                            ? "100"
+                            : "$msg%",
+                    style: const TextStyle(fontSize: 25),
+                  ),
+                  progressColor: const Color.fromARGB(255, 12, 0, 247),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  msg.isEmpty ? 'Ainda não há mensagem' : "Umidade do Solo",
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 12, 0, 247), fontSize: 25),
+                ),
+              ),
+            ],
           ),
         ),
       ),
