@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
 
   onLoadPage() async {
     var resultado = await dio
-        .get("https://b808-187-84-182-104.ngrok-free.app/api/petinder");
+        .get("https://f831-187-84-179-240.ngrok-free.app/api/petinder");
     setState(() {
       dogs.clear();
       dogs.addAll((resultado.data as List).map((e) => DogEntity.fromMap(e)));
