@@ -2,18 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:petinder/chat_widget.dart';
 
 class DogChat extends StatefulWidget {
-  const DogChat({super.key});
+
+  DogChat({super.key});
 
   @override
   State<DogChat> createState() => _DogChatState();
 }
 
 class _DogChatState extends State<DogChat> {
+  final List<ChatWidget> msgs = [];
+  
   @override
+  
   Widget build(BuildContext context) {
+    String textController = '';
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-    var textController = TextEditingController();
+    void newMsg(String msg) {
+      msgs.add(ChatWidget(msg: textController));
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Chat"),
@@ -33,62 +41,7 @@ class _DogChatState extends State<DogChat> {
                     height: height * 0.85,
                     color: Colors.blue,
                     child: ListView(
-                      children: [
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                        ChatWidget(),
-                      ],
+                      children: msgs,
                     ),
                   ),
                 ],
@@ -103,11 +56,19 @@ class _DogChatState extends State<DogChat> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: TextField(
-                  controller: textController,
+                  onChanged: (value) {
+                    textController = value;
+                  },
                   decoration: InputDecoration(
                       suffix: IconButton(
                           padding: EdgeInsets.only(top: 20),
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              textController.isEmpty
+                                  ? null
+                                  : newMsg(textController);
+                            });
+                          },
                           icon: Icon(
                             Icons.send,
                             color: Colors.green,

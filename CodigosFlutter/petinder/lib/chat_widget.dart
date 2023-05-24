@@ -1,7 +1,12 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class ChatWidget extends StatelessWidget {
-  const ChatWidget({super.key});
+  final String msg;
+  ChatWidget({
+    Key? key,
+    required this.msg,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,7 @@ class ChatWidget extends StatelessWidget {
           child: Container(
             child: SingleChildScrollView(
               child: Text(
-                "Batata sadouij asoidja soija sodiasodjas odjoasi dsaojdasoiji asiudh asiduhas ",
+                msg,
               ),
             ),
           ),

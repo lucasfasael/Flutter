@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
   int umidade = 40;
   String msg = '0';
 
-  final client = MqttServerClient('192.168.101.8', '1883');
+  final client = MqttServerClient('test.mosquitto.org', '1883');
 
   Future<void> kev() async {
     client.logging(on: true);
@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
     }
 
     if (client.connectionStatus!.state == MqttConnectionState.connected) {
-      const topic = 'umidade';
+      const topic = 'lf/umidade';
       client.subscribe(topic, MqttQos.atMostOnce);
       client.updates!.listen((List<MqttReceivedMessage<MqttMessage?>>? c) {
         final recMess = c![0].payload as MqttPublishMessage;
