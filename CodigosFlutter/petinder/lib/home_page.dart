@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
 
   onLoadPage() async {
     var resultado = await dio
-        .get("https://f831-187-84-179-240.ngrok-free.app/api/petinder");
+        .get("https://cd1b-187-84-179-240.ngrok-free.app/api/petinder");
     setState(() {
       dogs.clear();
       dogs.addAll((resultado.data as List).map((e) => DogEntity.fromMap(e)));
@@ -62,26 +62,21 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: GestureDetector(
-          onTap: () {
-            Navigator.of(context).pushNamed("chat");
-          },
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Icon(
-                Icons.pets,
-                color: Colors.amber,
-              ),
-              Text(
-                widget.title,
-              ),
-              const SizedBox(
-                width: 50,
-              ),
-            ],
-          ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Icon(
+              Icons.pets,
+              color: Colors.amber,
+            ),
+            Text(
+              widget.title,
+            ),
+            const SizedBox(
+              width: 50,
+            ),
+          ],
         ),
       ),
       drawer: Drawer(

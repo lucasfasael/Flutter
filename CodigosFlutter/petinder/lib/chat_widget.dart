@@ -13,19 +13,16 @@ class ChatWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 50,
-        width: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadiusDirectional.circular(20),
           color: Colors.amber,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(5.0),
+          padding: const EdgeInsets.all(15.0),
           child: Container(
-            child: SingleChildScrollView(
-              child: Text(
-                msg,
-              ),
+            child: Text(
+              msg,
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
             ),
           ),
         ),
