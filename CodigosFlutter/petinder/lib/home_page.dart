@@ -23,23 +23,7 @@ class _HomePageState extends State<HomePage> {
   int opcaoSelecionada = 0;
   final dio = Dio();
   List<DogEntity> dogsMatchs = [];
-  List<DogEntity> dogs = [
-    // DogEntity(
-    //   id: "1",
-    //   nome: "Ayla",
-    //   image:
-    //       "https://i.pinimg.com/originals/b9/5c/d8/b95cd891ad076b65d549b744d16270da.jpg",
-    //   sexo: "F",
-    //   raca: "Husky",
-    // ),
-    // DogEntity(
-    //   id: "2",
-    //   nome: "Thor",
-    //   image: "https://www.loveforpet.com.br/servicos/img/grande/lulu_foto.jpg",
-    //   sexo: "M",
-    //   raca: "Lulu",
-    // ),
-  ];
+  List<DogEntity> dogs = [];
 
   @override
   void initState() {
@@ -49,7 +33,7 @@ class _HomePageState extends State<HomePage> {
 
   onLoadPage() async {
     var resultado =
-        await dio.get("https://cf5f-187-84-181-76.ngrok-free.app/api/petinder");
+        await dio.get("https://7263-187-84-181-76.ngrok-free.app/api/petinder");
     setState(() {
       dogs.clear();
       dogs.addAll((resultado.data as List).map((e) => DogEntity.fromMap(e)));
