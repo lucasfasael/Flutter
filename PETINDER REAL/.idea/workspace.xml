@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a3374bfa-aeaf-4dd3-af74-676960ce973f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ScreenMatch/src/main/MainAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/Audio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/MyFavorite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/MyFavorite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/PodCast.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/PodCast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScreenMatch/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScreenMatch/ScreenMatch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/ScreenMatch.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Serie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/main/MainWithList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/main/MainWithList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../buyingCart/src/components/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../buyingCart/src/components/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../buyingCart/src/components/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../buyingCart/src/components/Product.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2V1hI1FDXVym4BClGvxQJLPUnkE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Códigos/Java/ScreenMatch"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3374bfa-aeaf-4dd3-af74-676960ce973f" name="Changes" comment="" />
+      <created>1694009409444</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694009409444</updated>
+    </task>
+    <servers />
+  </component>
+</project>

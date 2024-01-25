@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PetinderApplication<Petinder>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.petinder.Petinder.PetinderApplication",
+            "projectName": "Petinder",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
