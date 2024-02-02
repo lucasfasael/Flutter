@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a3374bfa-aeaf-4dd3-af74-676960ce973f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ScreenMatch/src/main/MainAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/Audio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/MyFavorite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/MyFavorite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/PodCast.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicPlayer/src/myMusic/components/PodCast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ScreenMatch/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ScreenMatch/ScreenMatch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/ScreenMatch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/br/com/alura/screenmatch/model/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ScreenMatch/src/main/MainWithList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenMatch/src/main/MainWithList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../buyingCart/src/components/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/../buyingCart/src/components/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../buyingCart/src/components/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../buyingCart/src/components/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/lib/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/linux/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/flutter/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/flutter/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/runner/flutter_window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../CodigosFlutter/petinder/windows/runner/flutter_window.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Petinder/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Petinder/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Petinder/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Petinder/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,21 +29,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2V1hI1FDXVym4BClGvxQJLPUnkE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Códigos/Java/ScreenMatch"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/codigos/flutter_projetos/Flutter/PETINDER REAL/Petinder&quot;
   }
-}]]></component>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

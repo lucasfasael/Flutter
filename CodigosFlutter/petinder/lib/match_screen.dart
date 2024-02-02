@@ -52,7 +52,7 @@ class Match extends StatelessWidget {
                 style: const TextStyle(fontSize: 15, color: Colors.white),
               ),
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Text(
                   dogEntity.nome,
                   style: const TextStyle(fontSize: 25, color: Colors.white),

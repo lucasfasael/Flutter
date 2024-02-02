@@ -29,26 +29,26 @@ class Sobre extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Padding(
-                  //   padding: const EdgeInsets.only(bottom: 12),
-                  //   child: SizedBox(
-                  //     width: 200,
-                  //     height: 200,
-                  //     child: ClipRRect(
-                  //         borderRadius: BorderRadius.circular(999),
-                  //         child: Image.asset(
-                  //           "assets/images/3.jpg",
-                  //           fit: BoxFit.cover,
-                  //           alignment: Alignment.topCenter,
-                  //         )),
-                  //   ),
-                  // ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 12),
+                    child: SizedBox(
+                      width: 200,
+                      height: 200,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(999),
+                          child: Image.asset(
+                            "assets/images/3.jpg",
+                            fit: BoxFit.cover,
+                            alignment: Alignment.topCenter,
+                          )),
+                    ),
+                  ),
                   Row(
                     children: const [
                       Flexible(
                         child: Text(
                           style: TextStyle(fontSize: 18, color: Colors.white),
-                          "Olá, esta é uma prova de conceito de uma aplicação de relacionamento canino da matéria de Orientação a Objetos em Java !",
+                          "Olá, meu nome é Lucas Fasael, sou o criador e desenvolvedor do Petinder !",
                         ),
                       ),
                     ],

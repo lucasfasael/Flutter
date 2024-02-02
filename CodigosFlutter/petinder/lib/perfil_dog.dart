@@ -96,9 +96,11 @@ class PerfilDog extends StatelessWidget {
                               Text(
                                 dogEntity.nome,
                                 style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30,
-                                    fontStyle: FontStyle.italic),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 28,
+                                  fontStyle: FontStyle.italic,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ),
                               dogEntity.sexo == "M"
                                   ? const Icon(
