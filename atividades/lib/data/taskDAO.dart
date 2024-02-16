@@ -13,7 +13,7 @@ class TaskDao {
   static const String _difficulty = 'dificuldade';
   static const String _image = 'imagem';
 
-  save(Task tarefa) async {
+  Future<dynamic> save(Task tarefa) async {
     print("Entrou na função save !!");
     Database bancoDeDados = await getDatabase();
     Map<String, dynamic> taskMap = toMap(tarefa);
@@ -21,24 +21,31 @@ class TaskDao {
     var exists = await find(tarefa.nome);
     if (exists.isEmpty) {
       print("A tarefa não existe !");
-      bancoDeDados.insert(_nomeTabela, taskMap);
+      await bancoDeDados.insert(_nomeTabela, taskMap);
+      print("Tarefa salva no banco de dados.");
     } else {
       print("A tarefa já existe !!");
-      bancoDeDados.update(
+      await bancoDeDados.update(
         _nomeTabela,
         taskMap,
         where: '$_name = ?',
         whereArgs: [tarefa.nome],
       );
+      print("Tarefa atualizada no banco de dados.");
     }
   }
 
   Future<List<Task>> findAll() async {
-    final Database bancoDeDados = await getDatabase();
-    final List<Map<String, dynamic>> result =
-        await bancoDeDados.query(_nomeTabela);
-    print("FindALL : ${toList(result)}");
-    return toList(result);
+    try {
+      final Database bancoDeDados = await getDatabase();
+      final List<Map<String, dynamic>> result =
+          await bancoDeDados.query(_nomeTabela);
+      print("FindALL : ${toList(result)}");
+      return toList(result);
+    } catch (e) {
+      print("Erro ao carregar tarefas: $e");
+      return []; // Retorna uma lista vazia em caso de erro
+    }
   }
 
   List<Task> toList(List<Map<String, dynamic>> mapaDeTarefas) {
@@ -61,7 +68,7 @@ class TaskDao {
   Future<List<Task>> find(String nomeDaTarefa) async {
     final Database bandoDeDados = await getDatabase();
     final List<Map<String, dynamic>> result = await bandoDeDados
-        .query(_nomeTabela, where: "$_name = '?' ", whereArgs: [nomeDaTarefa]);
+        .query(_nomeTabela, where: "$_name = ?", whereArgs: [nomeDaTarefa]);
     print("Tarefa encontrada: ${toList(result)}");
     return toList(result);
   }

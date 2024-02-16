@@ -1,4 +1,5 @@
 import 'package:batata/components/difficulty.dart';
+import 'package:batata/data/taskDAO.dart';
 import 'package:flutter/material.dart';
 
 class Task extends StatefulWidget {
@@ -103,7 +104,11 @@ class _TaskState extends State<Task> {
                     SizedBox(
                       height: 52,
                       width: 52,
-                      child: FloatingActionButton(
+                      child: GestureDetector(
+                        onLongPress: () {
+                          TaskDao().delete(widget.nome);
+                        },
+                        child: FloatingActionButton(
                           onPressed: () {
                             print(widget.nivel);
                             setState(() {
@@ -121,9 +126,12 @@ class _TaskState extends State<Task> {
                               Icon(Icons.arrow_drop_up),
                               Text(
                                 'UP',
-                                style: TextStyle(fontSize: 14),                              )
+                                style: TextStyle(fontSize: 14),
+                              )
                             ],
-                          )),
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 ),
