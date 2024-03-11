@@ -1,0 +1,64 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Level-02.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
+    "fileStates": {
+        "Level-01.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 1.62390625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.5997305878957,
+                "y": 183.20023092466084
+            }
+        },
+        "Level-02.tmx": {
+            "scale": 1.62390625,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 314.05753872799,
+                "y": 199.2110074088328
+            }
+        },
+        "Pixel Adventure.tsx": {
+            "scaleInDock": 1
+        },
+        "level-01.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 335.3333333333333,
+                "y": 137.66666666666669
+            }
+        }
+    },
+    "last.imagePath": "/home/fasael/codigos/Flutter/pixel_adventure/assets/images/Terrain",
+    "map.height": 23,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 40,
+    "openFiles": [
+        "Level-01.tmx",
+        "Level-02.tmx"
+    ],
+    "project": "tile.tiled-project",
+    "recentFiles": [
+        "Level-01.tmx",
+        "Level-02.tmx",
+        "level-01.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
