@@ -1,6 +1,8 @@
 import 'dart:async';
 
+
 import 'package:flame/components.dart';
+
 
 import 'package:flutter/services.dart';
 import 'package:pixel_adventure/components/utils.dart';
@@ -19,13 +21,15 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   late final SpriteAnimation idleAnimation;
   late final SpriteAnimation runningAnimation;
   final double stepTime = 0.05;
-
-
+  final double _gravity = 9.8;
+  final double _jumpForce = 460;
+  final double _terminalVelocity = 300;
+  
   double horizontalMovement = 0;
 
   double moveSpeed = 100;
   Vector2 velocity = Vector2.zero();
-  List<CollisionBlock> collisionBLocks = [];
+  List<CollisionBlock> collisionBlocks = [];
 
   @override
   FutureOr<void> onLoad() {
@@ -39,6 +43,9 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
     _updatePlayerState();
     _updatePlayerMovement(dt);
     _checkHorizontalCollisions();
+    _applyGravity(dt);
+    _checkVerticalCollisions();
+    
     super.update(dt);
   }
 
@@ -93,7 +100,7 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
   }
   
   void _checkHorizontalCollisions() {
-    for(final block in collisionBLocks ){
+    for(final block in collisionBlocks ){
       //handle collision
       if(!block.isPlatform){
         if(checkCollision(this, block)){
@@ -109,7 +116,28 @@ class Player extends SpriteAnimationGroupComponent with HasGameRef<PixelAdventur
       }
     }
   }
+  
+  void _applyGravity(double dt) {
+    velocity.y += _gravity;
+    velocity.y = velocity.y.clamp(-_jumpForce, _terminalVelocity);
+    position.y += velocity.y * dt;
 
+  }
+  
+  void _checkVerticalCollisions(){
+    for(final block in collisionBlocks){
+      if(block.isPlatform){
 
+      } else{
+        if(checkCollision(this, block)){
+          if(velocity.y > 0 ){
+            velocity.y = 0;
+            position.y = block.y - width;
+           
+          }
+        }
+      }
+    }
+  }
     
 }

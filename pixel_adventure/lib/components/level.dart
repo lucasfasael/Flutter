@@ -53,7 +53,7 @@ class Level extends World{
       }
     }
     // TODO: implement onLoad
-    player.collisionBLocks = collisionBLocks;
+    player.collisionBlocks = collisionBLocks;
     return super.onLoad();
     
   }
