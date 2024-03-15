@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tinder_anime/screens/AddScreen.dart';
 import 'package:tinder_anime/screens/HomeScreen.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => HomeScreen(),
+        "/add_screen": (context) => AddScreen(),
       },
     );
   }
