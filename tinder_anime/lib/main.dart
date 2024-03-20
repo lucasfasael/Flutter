@@ -23,8 +23,17 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => HomeScreen(),
-        "/add_screen": (context) => AddScreen(),
+        "/": (context) => HomeScreen(
+              popAnime: (anime) {
+                animes.removeLast();
+              },
+            ),
+        "/add_screen": (context) => AddScreen(
+              addAnime: (anime) {
+                // Passando addAnime como parâmetro
+                animes.add(anime); // Adicionando anime à lista
+              },
+            ),
       },
     );
   }
